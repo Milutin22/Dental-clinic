@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/98ac9bf0bd.js" crossorigin="anonymous"></script>
+
+    <title>Make an appointment</title>
+</head>
+<body id="appointment">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container p-0">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo dentist" style="width: 45px;"></a>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars" style="color: white; font-size:2.6rem;"></i>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active mr-4">
+                        <a class="nav-link" href="index.html">HOME</span></a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="dentists.html">DENTISTS</a>
+                    </li>
+                    <li class="nav-item mr-4">
+                        <a class="nav-link" href="services.html">SERVICES</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #2a3347!important;">
+                        CONTACT
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="forum.html">FORUM</a>
+                        <a class="dropdown-item" href="#" style="color: #2a3347!important;">APPOINTMENT</a>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      
+    <div id="img_header">
+      <div class="container d-flex p-0" style="height: 100%; color: white;">
+        <h1 class="display-2 align-self-center">Make An Appointment</h1>
+      </div>
+    </div>
+
+    
+    <div id="appointment_main">
+      <div class="container">
+        <div class="row justify-content-between">
+          <form action="appointment.php" method="POST" class="col-12 col-lg-5 order-2 order-lg-1 p-0">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" required>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="tel">Phone number</label>
+              <input type="tel" class="form-control" id="tel" required>
+              <small id="tel" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="dentists">Choose a dentist:</label>
+              <select name="dentists" id="dentists">
+                <option value="dentist1">Dr James Smith</option>
+                <option value="dentist2">Dr Jennifer Brown</option>
+                <option value="dentist3">Dr Patrick Ramirez</option>
+              </select>
+            </div>
+            <label for="date">Choose date:</label>
+              <input type="date" id="date" name="appointment"  min="2018-01-01" max="2021-12-31" required>
+            <button type="submit" class="btn rounded-0 d-block mt-4">Send</button>
+          </form>
+          
+
+          <!--MAP START-->
+          <div id="map" class="col-12 col-lg-5 order-1 order-lg-2 p-0"></div>
+          <script>
+            var map = L.map('map').setView([44.81, 20.46], 13);
+            var marker = L.marker([44.81, 20.46]).addTo(map);
+              marker.bindPopup('Dental Clinic')
+              marker.openPopup();
+            L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wPbkGgkVhYc3e7IzLyBV',{
+              tileSize: 512,
+              zoomOffset: -1,
+              minZoom: 1,
+              attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+              crossOrigin: true
+            }).addTo(map);
+          </script>
+         <!--MAP END-->
+
+        </div>
+      </div>
+    </div>
+    
+    <footer class="container-fluid">
+      <div class="container pt-4">
+        <div>
+          <h2>Have a questions?</h2>
+          <p class="mb-1" ><i class="fas fa-phone-alt"></i> +381-64-111/111</p>
+          <p class="mb-1"><i class="fas fa-paper-plane"></i> milutin.bogosavljevic8@gmail.com</p>
+          <p class="mb-1"><i class="fas fa-map-marker-alt"></i> Address, City</p>
+        </div>
+        <div>
+          <hr>
+          <p>Copyright ©2021 All rights reserved | Milutin Bogosavljević</p>
+        </div>
+      </div> 
+    </footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

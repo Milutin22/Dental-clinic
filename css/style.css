@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*--------ANIMATIONS FOR JS--------*/
+
+.slide {
+    animation: move ease-in-out 0.6s;
+}
+
+@keyframes move {
+    0% {transform: translatex(-1000px); opacity: 0;}
+    70% {transform: translatex(100px);}
+    100% {transform: translatex(0px); opacity: 1;}
+}
+
+
+.slide_reverse {
+    animation: moveReverse ease-in-out 0.6s;
+}
+
+@keyframes moveReverse {
+    0% {transform: translatex(1000px); opacity: 0;}
+    70% {transform: translatex(-100px);}
+    100% {transform: translatex(0px); opacity: 1;}
+}
+
+
+.shake {
+    animation: shaker 0.3s;
+}
+
+@keyframes shaker {
+    0% {transform: rotate(0);}
+    25% {transform: rotate(3deg);}
+    50% {transform: rotate(-3deg);}
+    75% {transform: rotate(3deg);}
+    100% {transform: rotate(0);}
+}
+
+
+.smooth_opacity {
+    animation: show ease-in-out 0.6s;
+}
+
+@keyframes show {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+/*--------HOME--------*/
+
+h1 {
+    line-height: 1;
+}
+
+h2 {
+    color: white;
+}
+
+a {
+    color: white!important;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+a:hover, a:active {
+    color: #2a3347!important;
+}
+
+
+.navbar, .dropdown-menu {
+    background-color: #00bfda!important;
+}
+
+nav button:focus, nav a {
+    outline: none;
+}
+
+.dropdown-menu a:hover {
+    background-color:  #00bfda;
+}
+
+.background_image {
+    background: rgba(24, 21, 21, 0.288);
+    height: 100px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.grey_background {
+    position: relative;
+    top: -300px;
+    height: 200px;
+    width: 100%;
+    z-index: 10;
+}
+
+.appointment {
+    background: rgba(24, 21, 21, 0.288);
+    height: 100%;
+}
+
+
+.grey_background button {
+    border: 3px solid #00bfda;
+    background: #00c1da56;
+}
+.grey_background button:hover {
+    background-color: #00bfda;
+    border: 3px solid #00bfda;
+}
+
+.grey_background p {
+    font-size: 1.5rem;
+    color: white;
+    
+}
+
+.about {
+    position: relative;
+    top: -150px;
+    filter: opacity(0);
+}
+
+.about .text {
+    border: 2px solid #00bfda;
+}
+
+.about .col-3 {
+    line-height: 2.2;
+    text-align: center;
+}
+
+
+.dentists_home {
+    position: relative;
+    top: -100px;
+    color: white;
+    filter: opacity(0);
+}
+
+.dentists_home .row div:nth-child(1) {
+    height: 400px;
+    background-color: #00bfda;
+    background-image: url(../img/profil1.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center bottom;
+}
+
+.dentists_home .row div:nth-child(1) aside {
+    height: 75%;
+}
+
+.dentists_home .row div:nth-child(2) {
+    height: 400px;
+    background-color: #2a3347;
+}
+
+.dentists_home .row div:nth-child(2) h2 {
+    margin-top: 9%;
+}
+
+.dentists_home .row div:nth-child(2) button {
+    background-color: #00bfda;
+    color: white;
+}
+
+.dentists_home .row div:nth-child(2) button:hover {
+    background-color: #04e2ff;
+}
+
+.dentists_home .fas:hover {
+    color: #2a3347;
+    cursor: pointer;
+}
+
+.quote {
+    position: relative;
+    top: -30px;
+}
+
+footer {
+    background-color: #2a3347;
+    height: 250px;
+    color: white
+}
+
+footer i {
+    color: #E71D36;
+}
+
+hr {
+    height: 1px;
+    border-width:0;
+    background-color:gray;
+    margin-top: 2rem;
+}
+
+
+/*--------DENTISTS--------*/
+
+#img_header {
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/dentists_header.jpg) top right;
+    height: 30vh;
+}
+
+#dentists_main {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#dentists_main h2 {
+    color: black;
+}
+
+
+#dentists_main hr {
+    height: 1px;
+    width: 100%;
+    background-color:#2a3347;
+}
+
+#dentists_main i {
+    color: #00bfda;
+}
+
+
+
+/*--------SERVICES--------*/
+
+#services_main div {
+    color: white;
+}
+
+#services_main i {
+    font-size: 5rem;
+}
+
+#services_main div div:nth-child(odd) {
+    background-color: #00bfda;
+}
+
+#services_main div div:nth-child(even) {
+    background-color: #2a3347;
+}
+
+
+
+
+/*--------FORUM and APPOINTMENT--------*/
+
+#forum_main, #appointment_main {
+    margin: 50px 0;
+}
+
+#appointment_main input:focus, #forum_main input:focus, #forum_main textarea:focus {
+    box-shadow: #00bfda 0px 0px 1px 1px;
+}
+
+
+#forum_main div.wall {
+    background-color: #2a3347;
+    color: white;
+    overflow: scroll;
+    height: 525px;
+}
+
+#forum_main div.wall h5, h6 {
+    color: #00bfda;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--------RESPONSIVE HOME--------*/
+
+@media (max-width: 900px) {
+
+    .grey_background {
+        display: none;
+    }
+    
+    .about {
+        top: 20px;
+    }
+
+    .dentists_home {
+        top: 65px;
+    }
+    
+    .dentists_home .row div:nth-child(1) {
+        background-size: 130%;
+    }
+
+    .quote {
+        top: 100px;
+    }
+
+    .quote p {
+        font-size: 2rem;
+    }
+
+
+    footer {
+        position: relative;
+        top: 100px;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .dentists_home .row div:nth-child(1) {
+        background-size: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    footer  {
+        height: auto;
+        padding-bottom: 5px;
+    }
+
+    footer div div:nth-child(2)  {
+        font-size: 0.5rem;
+    }
+}
+
+
+
+/*--------RESPONSIVE DENTISTS--------*/
+
+
+@media (max-width: 993px) {
+    .dentists_img {
+        position: relative;
+        left: -125px;
+    }
+}
+
+
+
+/*--------RESPONSIVE APPOINTMENT--------*/
+
+@media (max-width: 991px) {
+    #map {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+}
+
+/*--------RESPONSIVE FORUM--------*/
+
+@media (max-width: 991px) {
+    #forum_main div.wall {
+        overflow: auto;
+        height: auto;
+    }
+}
