@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body, html {
+    width: auto!important;
+    overflow-x: hidden!important;
+}
 
 /*--------ANIMATIONS FOR JS--------*/
 
