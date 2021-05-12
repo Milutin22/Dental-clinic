@@ -106,8 +106,9 @@ const app = {
         //var element3 = document.getElementsByClassName('quote')[0];
 
 
-            window.addEventListener('scroll', scroll, false);
-            function scroll() {
+            if(window.innerWidth > 800) {
+                window.addEventListener('scroll', scroll, false);
+                function scroll() {
                     if(window.pageYOffset > 200) {
                         element1.classList.add('slide');
                         element1.style.cssText = 'filter: opacity(1)';
@@ -122,13 +123,12 @@ const app = {
                         element2.classList.remove('slide_reverse');
                         element2.style.cssText = 'filter: opacity(0)';
                     }
-                  /*  if(window.pageYOffset > 1000) {
-                        element3.classList.add('smooth_opacity');
-                        element3.style.cssText = 'filter: opacity(1)';
-                    } else if(window.pageYOffset < 800) {
-                        element3.classList.remove('smooth_opacity');
-                        element3.style.cssText = 'filter: opacity(0)';
-                    }*/
+                }
+            } else {
+                element1.classList.add('slide');
+                element1.style.cssText = 'filter: opacity(1)';
+                element2.classList.add('slide_reverse');
+                element2.style.cssText = 'filter: opacity(1)';
             }
     },
 
