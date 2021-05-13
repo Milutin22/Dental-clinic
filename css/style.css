@@ -342,6 +342,11 @@ hr {
     }
 }
 
+@media (max-width: 370px) {
+    h1{
+        font-size: 1.2rem;
+    }
+}
 
 
 /*--------RESPONSIVE DENTISTS--------*/
