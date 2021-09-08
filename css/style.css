@@ -128,7 +128,6 @@ nav button:focus, nav a {
 .about {
     position: relative;
     top: -150px;
-    filter: opacity(0);
 }
 
 .about .text {
@@ -145,7 +144,6 @@ nav button:focus, nav a {
     position: relative;
     top: -100px;
     color: white;
-    filter: opacity(0);
 }
 
 .dentists_home .row div:nth-child(1) {
