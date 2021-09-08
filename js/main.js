@@ -97,39 +97,6 @@ const app = {
             textDemo.classList.remove('smooth_opacity');
         }
 
-
-
-        /*-----------animations when scrolling------------*/
-
-        var element1 = document.getElementsByClassName('about')[0];
-        var element2 = document.getElementsByTagName('section')[0];
-        //var element3 = document.getElementsByClassName('quote')[0];
-
-
-            if(window.innerWidth > 800) {
-                window.addEventListener('scroll', scroll, false);
-                function scroll() {
-                    if(window.pageYOffset > 200) {
-                        element1.classList.add('slide');
-                        element1.style.cssText = 'filter: opacity(1)';
-                    } else if(window.pageYOffset < 100) {
-                        element1.classList.remove('slide');
-                        element1.style.cssText = 'filter: opacity(0)';
-                    }
-                    if (window.pageYOffset > 528) {
-                        element2.classList.add('slide_reverse');
-                        element2.style.cssText = 'filter: opacity(1)';
-                    } else if (window.pageYOffset < 350) {
-                        element2.classList.remove('slide_reverse');
-                        element2.style.cssText = 'filter: opacity(0)';
-                    }
-                }
-            } else {
-                element1.classList.add('slide');
-                element1.style.cssText = 'filter: opacity(1)';
-                element2.classList.add('slide_reverse');
-                element2.style.cssText = 'filter: opacity(1)';
-            }
     },
 
 /*-----------DENTISTS PAGE------------*/
